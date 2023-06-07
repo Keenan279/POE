@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:outlineProvider="none"
+    android:outlineSpotShadowColor="#000000"
+    tools:context=".Calendar">
+
+    <ImageView
+        android:id="@+id/imgBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        app:srcCompat="@drawable/back_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/calendar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="YOUR CALENDAR"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#94D8E1"
+                android:outlineAmbientShadowColor="#000000"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp">
+
+                <CalendarView
+                    android:id="@+id/singleCalender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="#94D8E1"
+                app:cardBackgroundColor="#94D8E1"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="Tasks For Date Selected"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/txtHold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Choose a range of two dates to display the tasks between"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/Calenders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CalendarView
+                    android:id="@+id/doubleCalenderOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal" />
+
+                <CalendarView
+                    android:id="@+id/doubleCalenderTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTwoCalendersSearch"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#94D8E1"
+                android:textColor="#151515"
+                android:layout_gravity="center"
+                android:text="SEARCH" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card78"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="#94D8E1"
+                app:cardBackgroundColor="#94D8E1"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView59"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="Tasks Between 2 Dates"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/EVENT6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event56"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+
+                        <TextView
+                            android:id="@+id/txtTask7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/txtTask8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/txtTask9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/event90"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardBackgroundColor="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/txtTask10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:backgroundTint="#e19d94"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
